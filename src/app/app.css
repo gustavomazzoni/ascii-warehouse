@@ -1,0 +1,30 @@
+body { 
+	padding-top: 50px;
+}
+
+.main-header {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    text-align: left;
+    font-size: 22px;
+    color: #fff;
+    background: rgba(51,150,222,1);
+}
+
+.main-header h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 25px;
+}
+
+section {
+	padding: 50px 0 50px 0;
+}
+
+@media screen and (max-width: 768px) {
+    body { 
+    	padding-top: 0px;
+    }
+}

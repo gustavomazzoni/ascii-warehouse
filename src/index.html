@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="ascii-warehouse">
+    <head>
+        <title>Discount Ascii Warehouse</title>
+
+        <!-- Bootstrap 3 from CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="assets/app.css">
+
+        <style type="text/css">
+	      /**
+	       * Hide when Angular is not yet loaded and initialized
+	       */
+	      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	        display: none !important;
+	      }
+	    </style>
+    </head>
+    <body ng-cloak>
+        
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Discount Ascii Warehouse</a>
+                </div>
+            </div>
+        </nav>
+        
+        <header class="main-header">
+            <div class="container">
+                <div class="col-md-12">
+                    <h1>Discount Ascii Warehouse</h1>
+                </div>
+                <div class="col-md-6">
+                    <p class="lead">Here you're sure to find a bargain on some of the finest ascii available to purchase.</p>
+                    <br>
+                    <p class="lead">Be sure to peruse our selection of ascii faces in an exciting range of sizes and prices.</p>
+                </div>
+                <div class="col-md-6" daw-advertisement>
+                    <p class="lead">But first, a word from our sponsors:</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="container products">
+            <daw-product-catalogue></daw-product-catalogue>
+        </section>
+
+        <!-- Load AngularJS application -->
+		<script src="assets/app.js"></script>
+    </body>
+</html>

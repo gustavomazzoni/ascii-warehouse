@@ -1,0 +1,12 @@
+.catalogue {
+	padding: 40px 0;
+}
+
+.catalogue > .product {
+	height: 200px;
+	padding-top: 25px;
+}
+
+.catalogue > .product > .price {
+	color: rgba(51,150,222,1);
+}

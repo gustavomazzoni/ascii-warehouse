@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
+		<div class="input-group">
+			<label for="sort" class="input-group-addon">Sort options:</label>
+			<select name="sort" ng-model="vm.sort" ng-change="vm.onSortChange()"
+				ng-options="sort as sort for sort in vm.sortList track by sort" class="form-control">
+			</select>
+		</div>
+	</div>
+</div>
+
+<div class="row catalogue" infinite-scroll="vm.loadProducts()" infinite-scroll-distance="1" 
+	infinite-scroll-disabled="vm.status === 'loading' || vm.status === 'end'">
+	<div class="col-xs-6 col-md-4 text-center product" 
+		ng-repeat-start="product in vm.products track by $index">
+		<p ng-style="{'font-size': product.size + 'px'}">{{::product.face}}</p>
+		<p class="price">{{::product.price / 100 | currency: '$' : 2}}</p>
+		<p class="text-muted date">{{product.date | humanizeDate}}</p>
+	</div>
+	<div class="col-xs-6 col-md-4 text-center" ng-if="vm.isAdPosition($index + 1)" ng-repeat-end daw-advertisement></div>
+    <div style="clear: both;"></div> <!-- to prevent ngInfiniteScroll Height issue with float elements. -->
+</div>
+
+<widget-notification class="text-center" type="info" message="loading..." ng-if="vm.status === 'loading'"></widget-notification>
+<widget-notification class="text-center" type="info" message="~ end of catalogue ~" ng-if="vm.status === 'end'"></widget-notification>
